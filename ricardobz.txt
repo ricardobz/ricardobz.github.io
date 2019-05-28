@@ -1,0 +1,13 @@
+<span id="a">root@ricardobz</span>:<span id="b">~</span><span id="c">#</span> cd /home/<!-- kjsdfhkjdhsfkjdshfkj -->about
+<span id="a">root@ricardobz</span>:<span id="b">/home/about</span><span id="c">#</span> cat <!-- kjsdfhkjdhsfkjdshfkj -->ricardobz.txt<br/><br/>
+Olá! Eu sou Ricardo Beckert.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>Formado em Redes e Administração, mas trabalho por volta de 10 anos com programação.</p>
+<p>Eu sou um grande fã de tecnologia, em especial a programação...  I love to code!!!</p> <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+<p>Trabalho alguns anos com programação e ao longo desse tempo aprendi duas coisas com maestria, resolver problemas e agregar valor.</p><!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+<p> Você pode visitar meus perfis: <br> <a href="https://br.linkedin.com/in/ricardo-beckert-686432a5">LinkedIn</a> <br> <a href="https://github.com/ricardobz">GitHub</a>  <br> <a href="https://www.facebook.com/ricardo.beckert">Facebook</a> <br> <a href="https://www.instagram.com/ricardobeckert/">Instagram</a> </p>
+Se desejar entrar em contato<!-- slightdelayhere-->, fique a vontade para me enviar um email: <a href="mailto: beckert.ricardo@gmail.com">beckert.ricardo@gmail.com</a>
+
+"<span id="k">Those who can imagine anything, can create the impossible</span>" <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+-Alan Turing
+
+<span id="a">root@ricardobz</span>:<span id="b">/home/about</span><span id="c">#</span> exit 
+<span id="a">guest@ricardobz</span>:<span id="b">~</span><span id="c">$</span> 
