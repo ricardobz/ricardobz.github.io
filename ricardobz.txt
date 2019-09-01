@@ -3,7 +3,7 @@
 Hello! I am Ricardo Beckert.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I have a degree in Computer Networks and Administration, but I work around 10 years with programming.</p>
 <p>I'm a big fan of technology, especially programming...  I love to code!!!</p> <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>I've been working with programming for a few years, and over that time I've learned two things with mastery, how to solve problems and add value to what I do.</p><!-- laglaglaglaglaglaglaglaglaglaglaglag -->
-<p>You can visit my profiles: <br> <a href="https://br.linkedin.com/in/ricardo-beckert">LinkedIn</a> <br> <a href="https://github.com/ricardobz">GitHub</a>  <br> <a href="https://www.facebook.com/ricardo.beckert">Facebook</a> <br> <a href="https://www.instagram.com/ricardobeckert/">Instagram</a> <br> <a href="https://stackoverflow.com/users/11786651">StackOverflow</a> <br> <a href="https://open.spotify.com/user/ricardobz">Spotify</a> </p>
+<p>You can visit my profiles: <br> <a href="https://br.linkedin.com/in/ricardo-beckert">LinkedIn</a> <br> <a href="https://github.com/ricardobz">GitHub</a>  <br> <a href="https://www.facebook.com/ricardo.beckert">Facebook</a> <br> <a href="https://www.instagram.com/ricardobeckert/">Instagram</a> <br> <a href="https://stackoverflow.com/users/11786651">StackOverflow</a> <br> <a href="https://dev.to/ricardobz">Dev.to</a> <br> <a href="https://open.spotify.com/user/ricardobz">Spotify</a> </p>
 If you want to contact me<!-- slightdelayhere-->, feel free to email me: <a href="mailto: beckert.ricardo@gmail.com">beckert.ricardo@gmail.com</a>
 
 "<span id="k">Those who can imagine anything, can create the impossible</span>" <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
