@@ -1,112 +1,57 @@
-var Typer={
-	text: null,
-	accessCountimer:null,
-	index:0, 
-	speed:2,
-	file:"", 
-	accessCount:0,
-	deniedCount:0, 
-	init: function(){
-		accessCountimer=setInterval(function(){Typer.updLstChr();},500); 
-		$.get(Typer.file,function(data){
-			Typer.text=data;
-			Typer.text = Typer.text.slice(0, Typer.text.length-1);
-		});
-	},
- 
-	content:function(){
-		return $("#console").html();
-	},
- 
-	write:function(str){
-		$("#console").append(str);
-		return false;
-	},
- 
-	addText:function(key){
-		
-		if(key.keyCode == 18){
-			Typer.accessCount++; 
-			
-			if(Typer.accessCount >= 3){
-				Typer.makeAccess(); 
-			}
-		}
-		
-    		else if(key.keyCode == 20){
-			Typer.deniedCount++; 
-			
-			if(Typer.deniedCount >= 3){
-				Typer.makeDenied(); 
-			}
-		}
-		
-    		else if(key.keyCode == 27){ 
-			Typer.hidepop(); 
-		}
-		
-    		else if(Typer.text){ 
-			var cont=Typer.content(); 
-			if(cont.substring(cont.length-1,cont.length) == "|") 
-				$("#console").html($("#console").html().substring(0,cont.length-1)); 
-			if(key.keyCode != 8){ 
-				Typer.index+=Typer.speed;	
-			}
-      		else {
-			if(Typer.index > 0) 
-				Typer.index-=Typer.speed;
-			}
-			var text=Typer.text.substring(0,Typer.index)
-			var rtn= new RegExp("\n", "g"); 
-	
-			$("#console").html(text.replace(rtn,"<br/>"));
-			window.scrollBy(0,50); 
-		}
-		
-		if ( key.preventDefault && key.keyCode != 122 ) { 
-			key.preventDefault()
-		};  
-		
-		if(key.keyCode != 122){ // otherway prevent keys default behavior
-			key.returnValue = false;
-		}
-	},
- 
-	updLstChr:function(){ 
-		var cont=this.content(); 
-		
-		if(cont.substring(cont.length-1,cont.length)=="|") 
-			$("#console").html($("#console").html().substring(0,cont.length-1)); 
-		
-		else
-			this.write("|"); // else write it
-	}
-}
- 
-function replaceUrls(text) {
-	var http = text.indexOf("http://");
-	var space = text.indexOf(".me ", http);
-	
-	if (space != -1) { 
-		var url = text.slice(http, space-1);
-		return text.replace(url, "<a href=\""  + url + "\">" + url + "</a>");
-	} 
-	
-	else {
-		return text
-	}
-}
+// Types the contents of a text file into #console, terminal style.
+// The source file contains HTML, so each frame re-renders the whole
+// substring: that lets the parser discard tags the cut lands inside
+// until enough characters have arrived to complete them.
+(function () {
+	"use strict";
 
-Typer.speed=3;
-Typer.file="ricardobz.txt";
-Typer.init();
- 
-var timer = setInterval("t();", 30);
-function t() {
-	Typer.addText({"keyCode": 123748});
-	
-	if (Typer.index > Typer.text.length) {
-		clearInterval(timer);
+	var SOURCE = "ricardobz.txt";
+	var CHARS_PER_FRAME = 3;
+	var FRAME_MS = 30;
+	var BLINK_MS = 500;
+
+	var out = document.getElementById("console");
+	var text = "";
+	var index = 0;
+	var cursorOn = true;
+	var typeTimer = null;
+	var blinkTimer = null;
+
+	function render() {
+		var body = text.substring(0, index).replace(/\n/g, "<br/>");
+		out.innerHTML = body + (cursorOn ? "|" : "");
 	}
-}
- 
+
+	function tick() {
+		index += CHARS_PER_FRAME;
+		render();
+		window.scrollBy(0, 50);
+
+		if (index > text.length) {
+			clearInterval(typeTimer);
+			typeTimer = null;
+		}
+	}
+
+	function blink() {
+		cursorOn = !cursorOn;
+		render();
+	}
+
+	fetch(SOURCE)
+		.then(function (response) {
+			if (!response.ok) {
+				throw new Error("Failed to load " + SOURCE + ": " + response.status);
+			}
+			return response.text();
+		})
+		.then(function (data) {
+			text = data.replace(/\n$/, "");
+			typeTimer = setInterval(tick, FRAME_MS);
+			blinkTimer = setInterval(blink, BLINK_MS);
+			render();
+		})
+		.catch(function (error) {
+			console.error(error);
+		});
+}());

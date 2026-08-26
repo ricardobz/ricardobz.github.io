@@ -1,58 +1,42 @@
 body {
-	background-color: #000
+	background-color: #000;
 }
 
-@media only screen and (max-width: 601px) {
-	#console {
-		font-family: courier, monospace;
-		color: #fff;
-		width:250px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:100px;
-		font-size:14px;
-	}
-  }
-
-@media only screen and (min-width: 602px) {
-	#console {
-		font-family: courier, monospace;
-		color: #fff;
-		width:750px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:100px;
-		font-size:14px;
-	}
-  }
+#console,
+.fallback {
+	font-family: courier, monospace;
+	color: #fff;
+	font-size: 14px;
+	width: 100%;
+	max-width: 750px;
+	margin: 100px auto 0;
+	padding: 0 16px;
+	box-sizing: border-box;
+}
 
 a {
 	color: #0bc;
 	text-decoration: none;
 }
 
-#a {
+.a {
 	color: #0f0;
 }
 
-#c {
+.c {
 	color: #0bc;
 }
 
-#b {
+.b {
 	color: #ff0096;
 }
 
-#k {
-    	animation: change 1s;
-}
-
-#op{
-    	color: #888888
+.k {
+	animation: change 1s;
 }
 
 @keyframes change {
-    	0%  { color:  #0f0; }
-    	50% { color:  #0f0; }
-    	99% { color: black; }
+	0%   { color: #0f0; }
+	50%  { color: #0f0; }
+	99%  { color: black; }
 }
