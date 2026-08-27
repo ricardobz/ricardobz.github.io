@@ -3,7 +3,7 @@
 Hello! I am Ricardo Beckert.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I have an associate degree in Computer Networks and a bachelor's degree in Business Administration, and I've worked with programming for over 10 years.</p>
 <p>I'm a big fan of technology, especially programming...  I love to code!!!</p> <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Over that time I've learned two things with mastery: how to solve problems, and how to add value to what I do.</p><!-- laglaglaglaglaglaglaglaglaglaglaglag -->
-<p>You can visit my profiles: <br> <a href="https://br.linkedin.com/in/ricardo-beckert">LinkedIn</a> <br> <a href="https://github.com/ricardobz">GitHub</a>  <br> <a href="https://www.instagram.com/ricardobeckert/">Instagram</a> <br> <a href="https://dev.to/ricardobz">Dev.to</a> <br> <a href="https://open.spotify.com/user/ricardobz">Spotify</a> </p>
+<p>You can visit my profiles: <br> <a href="https://br.linkedin.com/in/ricardo-beckert">LinkedIn</a> <br> <a href="https://github.com/ricardobz">GitHub</a>  <br> <a href="https://www.instagram.com/ricardobeckert/">Instagram</a> <br> <a href="https://dev.to/ricardobz">Dev.to</a> <br> <a href="https://open.spotify.com/user/ricardobz">Spotify</a> <br> <a href="https://open.spotify.com/artist/5h5cwkwfnOt7xXxyxyxWnV">My Music</a> </p>
 If you want to contact me<!-- slightdelayhere-->, feel free to email me: <a href="mailto:beckert.ricardo@gmail.com">beckert.ricardo@gmail.com</a>
 
 "<span class="k">Those who can imagine anything, can create the impossible</span>" <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
