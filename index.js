@@ -34,6 +34,17 @@
 		["My Music", "https://open.spotify.com/artist/5h5cwkwfnOt7xXxyxyxWnV"]
 	];
 
+	var PROJECTS = [
+		["Valentina, a Bonita", "https://valentina-a-bonita.netlify.app/",
+			"a song for Valentina, my dog"],
+		["Floripa, Sina Bonita", "https://floripa-sina-bonita.netlify.app/",
+			"a song for Floripa, the city where I was born"],
+		["Pleceboia", "https://pleceboia.netlify.app/",
+			"my metal music, named after a character I invented playing D&D"],
+		["Lasagna Ipsum", "https://lasagna-ipsum.netlify.app/",
+			"lorem ipsum with an Italian accent, for a lasagna addict"]
+	];
+
 	var FILES = {
 		"about.txt": "Hello! I am Ricardo Beckert.<br/><br/>" +
 			"I have an associate degree in Computer Networks and a bachelor's degree in " +
@@ -42,7 +53,8 @@
 			"Over that time I've learned two things with mastery: how to solve problems, " +
 			"and how to add value to what I do.",
 		"contact.txt": "Feel free to email me: " + mailto(),
-		"links.txt": links()
+		"links.txt": links(),
+		"projects.txt": projects()
 	};
 
 	function esc(value) {
@@ -58,7 +70,17 @@
 
 	function links() {
 		return PROFILES.map(function (profile) {
-			return '<a href="' + profile[1] + '" target="_blank" rel="noopener">' + profile[0] + "</a>";
+			return anchor(profile[0], profile[1]);
+		}).join("<br/>");
+	}
+
+	function anchor(label, href) {
+		return '<a href="' + href + '" target="_blank" rel="noopener">' + label + "</a>";
+	}
+
+	function projects() {
+		return PROJECTS.map(function (project) {
+			return anchor(project[0], project[1]) + " - " + project[2];
 		}).join("<br/>");
 	}
 
@@ -171,6 +193,12 @@
 			about: "my profiles around the web",
 			run: function () {
 				write(links());
+			}
+		},
+		projects: {
+			about: "sites I built for fun",
+			run: function () {
+				write(projects());
 			}
 		},
 		email: {
