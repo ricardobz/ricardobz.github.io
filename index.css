@@ -40,3 +40,56 @@ a {
 	50%  { color: #0f0; }
 	99%  { color: black; }
 }
+
+#shell {
+	font-family: courier, monospace;
+	color: #fff;
+	font-size: 14px;
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 16px 100px;
+	box-sizing: border-box;
+}
+
+#shell .out {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+#line {
+	position: relative;
+	word-break: break-word;
+}
+
+#cmd {
+	white-space: pre-wrap;
+}
+
+#caret {
+	display: inline-block;
+	width: 8px;
+	height: 1em;
+	background-color: #fff;
+	vertical-align: text-bottom;
+	animation: blink 1s step-end infinite;
+}
+
+#input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	opacity: 0;
+	color: transparent;
+	background: transparent;
+	font: inherit;
+}
+
+@keyframes blink {
+	0%, 50% { opacity: 1; }
+	51%, 100% { opacity: 0; }
+}

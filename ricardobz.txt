@@ -10,4 +10,3 @@ If you want to contact me<!-- slightdelayhere-->, feel free to email me: <a href
 -Alan Turing
 
 <span class="a">root@ricardobz</span>:<span class="b">/home/about</span><span class="c">#</span> exit 
-<span class="a">guest@ricardobz</span>:<span class="b">~</span><span class="c">$</span> 

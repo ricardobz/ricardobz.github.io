@@ -22,6 +22,16 @@
   <body>
     <div id="console"></div>
 
+    <div id="shell" hidden>
+      <div id="log"></div>
+      <div id="line">
+        <span class="a">guest@ricardobz</span>:<span class="b">~</span><span class="c">$</span>
+        <span id="cmd"></span><span id="caret"></span>
+        <input id="input" type="text" autocomplete="off" autocapitalize="off"
+               autocorrect="off" spellcheck="false" aria-label="terminal input">
+      </div>
+    </div>
+
     <noscript>
       <div class="fallback">
         <h1>Ricardo Beckert</h1>
